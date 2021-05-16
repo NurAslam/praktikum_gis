@@ -1,0 +1,1 @@
+<?php /**PATH C:\laragon\www\praktikum_gis _coba\resources\views/about.blade.php ENDPATH**/ ?>

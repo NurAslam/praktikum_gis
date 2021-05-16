@@ -36,6 +36,9 @@
                         <li class="nav-item"><a class="nav-link" href="{{ route('outlet_map.index') }}">{{ __('menu.our_outlets') }}</a></li>
                         @guest
                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('about') }}">{{ __('About') }}</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             <li class="nav-item">
@@ -46,6 +49,9 @@
                         @else
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('outlets.index') }}">{{ __('outlet.list') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('about') }}">{{ __('About') }}</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

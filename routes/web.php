@@ -12,10 +12,11 @@
 */
 
 Route::get('/', 'OutletMapController@index');
-
+Route::get('/about', 'AboutController@about')->name('about');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 
 /*
  * Outlets Routes

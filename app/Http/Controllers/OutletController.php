@@ -42,15 +42,25 @@ class OutletController extends Controller
      * @return \Illuminate\Routing\Redirector
      */
     public function store(Request $request)
-    {
+    {   
+
         $this->authorize('create', new Outlet);
 
         $newOutlet = $request->validate([
             'name'      => 'required|max:60',
             'address'   => 'nullable|max:255',
+            'tipe'      => 'nullable|max:255',
+            'gambar'    => 'mimes:jpeg,png,jpg,gif,svg',
             'latitude'  => 'nullable|required_with:longitude|max:15',
             'longitude' => 'nullable|required_with:latitude|max:15',
         ]);
+
+       
+            
+        $newOutlet['gambar'] = $request->file('gambar')->store(
+            'image','public'
+        );
+        
         $newOutlet['creator_id'] = auth()->id();
 
         $outlet = Outlet::create($newOutlet);
@@ -96,9 +106,14 @@ class OutletController extends Controller
         $outletData = $request->validate([
             'name'      => 'required|max:60',
             'address'   => 'nullable|max:255',
+             'gambar'    => 'mimes:jpeg,png,jpg,gif,svg',
             'latitude'  => 'nullable|required_with:longitude|max:15',
             'longitude' => 'nullable|required_with:latitude|max:15',
         ]);
+        $outletData['gambar'] = $request->file('gambar')->store(
+            'image','public'
+        );
+        
         $outlet->update($outletData);
 
         return redirect()->route('outlets.show', $outlet);

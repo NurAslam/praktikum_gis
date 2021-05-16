@@ -14,6 +14,8 @@
                     <p>{{ $outlet->name }}</p>
                     <label class="control-label text-primary">{{ __('outlet.address') }}</label>
                     <p>{{ $outlet->address }}</p>
+                    <label class="control-label text-primary">{{ __('outlet.tipe') }}</label>
+                    <p>{{ $outlet->tipe }}</p>
                     <label class="control-label text-primary">{{ __('outlet.latitude') }}</label>
                     <p>{{ $outlet->latitude }}</p>
                     <label class="control-label text-primary">{{ __('outlet.longitude') }}</label>
@@ -35,9 +37,14 @@
         @else
         <div class="card">
             <div class="card-header">{{ __('outlet.edit') }}</div>
-            <form method="POST" action="{{ route('outlets.update', $outlet) }}" accept-charset="UTF-8">
-                {{ csrf_field() }} {{ method_field('patch') }}
+            <form method="POST" action="{{ route('outlets.update', $outlet) }}" accept-charset="UTF-8" enctype="multipart/form-data">
+                {{ csrf_field() }}
                 <div class="card-body">
+                    <div class="form-group">
+                        <label for="gambar">{{ __('outlet.gambar') }}</label>
+                        <input id="gambar" type="file" class="form-control{{ $errors->has('gambar') ? ' is-invalid' : '' }}" name="gambar" value="{{ old('gambar') }}" required>
+                        {!! $errors->first('gambar', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    </div>
                     <div class="form-group">
                         <label for="name" class="control-label">{{ __('outlet.name') }}</label>
                         <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name', $outlet->name) }}" required>
@@ -48,6 +55,12 @@
                         <textarea id="address" class="form-control{{ $errors->has('address') ? ' is-invalid' : '' }}" name="address" rows="4">{{ old('address', $outlet->address) }}</textarea>
                         {!! $errors->first('address', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
+                    <div class="form-group">
+                        <label for="tipe" class="control-label">{{ __('outlet.tipe') }}</label>
+                        <input id="tipe" type="text" class="form-control{{ $errors->has('tipe') ? ' is-invalid' : '' }}" name="tipe" value="{{ old('tipe', $outlet->tipe) }}" required>
+                        {!! $errors->first('tipe', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    </div>
+                    
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">

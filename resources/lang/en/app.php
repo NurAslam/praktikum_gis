@@ -2,7 +2,7 @@
 
 return [
     // Labels
-    'table_no'          => '#',
+    'table_no'          => 'No',
     'total'             => 'Total',
     'action'            => 'Actions',
     'show_detail_title' => 'View :name :type detail',

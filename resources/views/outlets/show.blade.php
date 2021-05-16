@@ -12,6 +12,8 @@
                     <tbody>
                         <tr><td>{{ __('outlet.name') }}</td><td>{{ $outlet->name }}</td></tr>
                         <tr><td>{{ __('outlet.address') }}</td><td>{{ $outlet->address }}</td></tr>
+                        <tr><td>{{ __('outlet.tipe') }}</td><td>{{ $outlet->tipe }}</td></tr>
+                        <tr><td>{{ __('outlet.gambar') }}</td><td><img src="{{ Storage::url($outlet->gambar) }}" alt="" width="100px"></td></tr>
                         <tr><td>{{ __('outlet.latitude') }}</td><td>{{ $outlet->latitude }}</td></tr>
                         <tr><td>{{ __('outlet.longitude') }}</td><td>{{ $outlet->longitude }}</td></tr>
                     </tbody>
