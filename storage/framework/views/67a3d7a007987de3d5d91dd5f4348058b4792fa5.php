@@ -32,6 +32,7 @@
                         <th><?php echo e(__('outlet.name')); ?></th>
                         <th><?php echo e(__('outlet.address')); ?></th>
                         <th><?php echo e(__('outlet.tipe')); ?></th>
+                        <th><?php echo e(__('outlet.fasilitas')); ?></th>
                         <th><?php echo e(__('outlet.gambar')); ?></th>
                         <th><?php echo e(__('outlet.latitude')); ?></th>
                         <th><?php echo e(__('outlet.longitude')); ?></th>
@@ -45,6 +46,7 @@
                         <td><?php echo $outlet->name_link; ?></td>
                         <td><?php echo e($outlet->address); ?></td>
                         <td><?php echo e($outlet->tipe); ?></td> 
+                        <td><?php echo e($outlet->fasilitas); ?></td> 
                         <td><img src="<?php echo e(Storage::url($outlet->gambar)); ?>" alt="" width="100"></td>
                         <td><?php echo e($outlet->latitude); ?></td>
                         <td><?php echo e($outlet->longitude); ?></td>

@@ -13,6 +13,7 @@
                         <tr><td><?php echo e(__('outlet.name')); ?></td><td><?php echo e($outlet->name); ?></td></tr>
                         <tr><td><?php echo e(__('outlet.address')); ?></td><td><?php echo e($outlet->address); ?></td></tr>
                         <tr><td><?php echo e(__('outlet.tipe')); ?></td><td><?php echo e($outlet->tipe); ?></td></tr>
+                        <tr><td><?php echo e(__('outlet.fasilitas')); ?></td><td><?php echo e($outlet->fasilitas); ?></td></tr>
                         <tr><td><?php echo e(__('outlet.gambar')); ?></td><td><img src="<?php echo e(Storage::url($outlet->gambar)); ?>" alt="" width="100px"></td></tr>
                         <tr><td><?php echo e(__('outlet.latitude')); ?></td><td><?php echo e($outlet->latitude); ?></td></tr>
                         <tr><td><?php echo e(__('outlet.longitude')); ?></td><td><?php echo e($outlet->longitude); ?></td></tr>

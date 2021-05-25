@@ -50,6 +50,7 @@ class OutletController extends Controller
             'name'      => 'required|max:60',
             'address'   => 'nullable|max:255',
             'tipe'      => 'nullable|max:255',
+            'fasilitas' => 'nullable|max:255',
             'gambar'    => 'mimes:jpeg,png,jpg,gif,svg',
             'latitude'  => 'nullable|required_with:longitude|max:15',
             'longitude' => 'nullable|required_with:latitude|max:15',
@@ -106,6 +107,7 @@ class OutletController extends Controller
         $outletData = $request->validate([
             'name'      => 'required|max:60',
             'address'   => 'nullable|max:255',
+            'fasilitas' => 'nullable|max:255',
             'gambar'    => 'mimes:jpeg,png,jpg,gif,svg',
             'latitude'  => 'nullable|required_with:longitude|max:15',
             'longitude' => 'nullable|required_with:latitude|max:15',

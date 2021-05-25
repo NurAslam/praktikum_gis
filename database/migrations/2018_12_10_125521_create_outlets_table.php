@@ -20,6 +20,7 @@ class CreateOutletsTable extends Migration
             $table->string('gambar')->nullable();
             $table->string('longitude', 15)->nullable();
             $table->string('latitude', 15)->nullable();
+            $table->string('fasilitas', 60);
             $table->string('tipe', 40)->nullable();
             $table->timestamps();
         });

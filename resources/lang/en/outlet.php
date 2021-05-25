@@ -28,7 +28,7 @@ return [
     'undeleteable'   => 'Wisata data cannot be deleted.',
 
     // Attributes
-    'name'       => 'Masukkan Nama Tempat',
+    'name'       => 'Nama Tempat',
     'address'    => 'Alamat Tempat',
     'tipe'       => 'Tipe',
     'gambar'     => 'Gambar',
@@ -36,4 +36,5 @@ return [
     'longitude'  => 'Longitude',
     'location'   => 'Location',
     'coordinate' => 'Coordinate',
+    'fasilitas' => 'Fasilitas',
 ];

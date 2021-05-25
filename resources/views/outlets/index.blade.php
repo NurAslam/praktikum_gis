@@ -32,6 +32,7 @@
                         <th>{{ __('outlet.name') }}</th>
                         <th>{{ __('outlet.address') }}</th>
                         <th>{{ __('outlet.tipe') }}</th>
+                        <th>{{ __('outlet.fasilitas') }}</th>
                         <th>{{ __('outlet.gambar') }}</th>
                         <th>{{ __('outlet.latitude') }}</th>
                         <th>{{ __('outlet.longitude') }}</th>
@@ -45,6 +46,7 @@
                         <td>{!! $outlet->name_link !!}</td>
                         <td>{{ $outlet->address }}</td>
                         <td>{{ $outlet->tipe }}</td> 
+                        <td>{{ $outlet->fasilitas }}</td> 
                         <td><img src="{{ Storage::url($outlet->gambar) }}" alt="" width="100"></td>
                         <td>{{ $outlet->latitude }}</td>
                         <td>{{ $outlet->longitude }}</td>

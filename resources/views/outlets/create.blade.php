@@ -30,6 +30,11 @@
                         <input id="tipe" type="text" class="form-control{{ $errors->has('tipe') ? ' is-invalid' : '' }}" name="tipe" value="{{ old('tipe') }}" required>
                         {!! $errors->first('tipe', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
+                    <div class="form-group">
+                        <label for="fasilitas" class="control-label">{{ __('outlet.fasilitas') }}</label>
+                        <input id="fasilitas" type="text" class="form-control{{ $errors->has('fasilitas') ? ' is-invalid' : '' }}" name="fasilitas" value="{{ old('fasilitas') }}" required>
+                        {!! $errors->first('fasilitas', '<span class="invalid-feedback" role="alert">:message</span>') !!}
+                    </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">

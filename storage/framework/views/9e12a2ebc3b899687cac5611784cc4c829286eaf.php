@@ -68,6 +68,12 @@
                         <?php echo $errors->first('tipe', '<span class="invalid-feedback" role="alert">:message</span>'); ?>
 
                     </div>
+                    <div class="form-group">
+                        <label for="fasilitas" class="control-label"><?php echo e(__('outlet.fasilitas')); ?></label>
+                        <input id="fasilitas" type="text" class="form-control<?php echo e($errors->has('fasilitas') ? ' is-invalid' : ''); ?>" name="fasilitas" value="<?php echo e(old('fasilitas', $outlet->fasilitas)); ?>" required>
+                        <?php echo $errors->first('fasilitas', '<span class="invalid-feedback" role="alert">:message</span>'); ?>
+
+                    </div>
                     
                     <div class="row">
                         <div class="col-md-6">

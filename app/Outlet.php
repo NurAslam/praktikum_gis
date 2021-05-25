@@ -13,7 +13,7 @@ class Outlet extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'address', 'gambar',  'longitude','latitude','tipe'
+        'name', 'address', 'gambar',  'longitude','latitude','tipe', 'fasilitas'
     ];
 
     /**
