@@ -106,16 +106,15 @@ class OutletController extends Controller
         $outletData = $request->validate([
             'name'      => 'required|max:60',
             'address'   => 'nullable|max:255',
-             'gambar'    => 'mimes:jpeg,png,jpg,gif,svg',
+            'gambar'    => 'mimes:jpeg,png,jpg,gif,svg',
             'latitude'  => 'nullable|required_with:longitude|max:15',
             'longitude' => 'nullable|required_with:latitude|max:15',
         ]);
         $outletData['gambar'] = $request->file('gambar')->store(
             'image','public'
         );
-        
         $outlet->update($outletData);
-
+        
         return redirect()->route('outlets.show', $outlet);
     }
 

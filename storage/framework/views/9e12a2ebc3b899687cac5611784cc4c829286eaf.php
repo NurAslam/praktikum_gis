@@ -39,13 +39,14 @@
         <?php else: ?>
         <div class="card">
             <div class="card-header"><?php echo e(__('outlet.edit')); ?></div>
+            <!-- <form method="PUT" action="<?php echo e(route('outlets.update', $outlet)); ?>" accept-charset="UTF-8" enctype="multipart/form-data"> -->
             <form method="POST" action="<?php echo e(route('outlets.update', $outlet)); ?>" accept-charset="UTF-8" enctype="multipart/form-data">
-                <?php echo e(csrf_field()); ?> <?php echo e(method_field('patch')); ?>
+            <?php echo e(csrf_field()); ?> <?php echo e(method_field('patch')); ?>
 
                 <div class="card-body">
                     <div class="form-group">
                         <label for="gambar"><?php echo e(__('outlet.gambar')); ?></label>
-                        <input id="gambar" type="file" class="form-control-file" name="gambar" value="<?php echo e(old('gambar')); ?>" required>
+                        <input id="gambar" type="file" class="form-control<?php echo e($errors->has('gambar') ? ' is-invalid' : ''); ?>" name="gambar" value="<?php echo e(old('gambar')); ?>">
                         <?php echo $errors->first('gambar', '<span class="invalid-feedback" role="alert">:message</span>'); ?>
 
                     </div>

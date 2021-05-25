@@ -37,12 +37,13 @@
         @else
         <div class="card">
             <div class="card-header">{{ __('outlet.edit') }}</div>
+            <!-- <form method="PUT" action="{{ route('outlets.update', $outlet) }}" accept-charset="UTF-8" enctype="multipart/form-data"> -->
             <form method="POST" action="{{ route('outlets.update', $outlet) }}" accept-charset="UTF-8" enctype="multipart/form-data">
-                {{ csrf_field() }}
+            {{ csrf_field() }} {{ method_field('patch') }}
                 <div class="card-body">
                     <div class="form-group">
                         <label for="gambar">{{ __('outlet.gambar') }}</label>
-                        <input id="gambar" type="file" class="form-control{{ $errors->has('gambar') ? ' is-invalid' : '' }}" name="gambar" value="{{ old('gambar') }}" required>
+                        <input id="gambar" type="file" class="form-control{{ $errors->has('gambar') ? ' is-invalid' : '' }}" name="gambar" value="{{ old('gambar') }}">
                         {!! $errors->first('gambar', '<span class="invalid-feedback" role="alert">:message</span>') !!}
                     </div>
                     <div class="form-group">
