@@ -11,6 +11,7 @@
 |
 */
 
+Route::get('/map', 'OutletMapController@map');
 Route::get('/', 'OutletMapController@index');
 Route::get('/about', 'AboutController@about')->name('about');
 Auth::routes();

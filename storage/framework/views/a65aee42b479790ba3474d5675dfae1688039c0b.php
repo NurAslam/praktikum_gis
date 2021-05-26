@@ -18,7 +18,7 @@
     <?php echo $__env->yieldContent('styles'); ?>
 </head>
 <body>
-    <div id="app">
+    <div id="app">  
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
@@ -37,9 +37,6 @@
                         <li class="nav-item"><a class="nav-link" href="<?php echo e(route('outlet_map.index')); ?>"><?php echo e(__('menu.our_outlets')); ?></a></li>
                         <?php if(auth()->guard()->guest()): ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?php echo e(route('about')); ?>"><?php echo e(__('About')); ?></a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="<?php echo e(route('login')); ?>"><?php echo e(__('Login')); ?></a>
                             </li>
                             <li class="nav-item">
@@ -50,9 +47,6 @@
                         <?php else: ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo e(route('outlets.index')); ?>"><?php echo e(__('outlet.list')); ?></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo e(route('about')); ?>"><?php echo e(__('About')); ?></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

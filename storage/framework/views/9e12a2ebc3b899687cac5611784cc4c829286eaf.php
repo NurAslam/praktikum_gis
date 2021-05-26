@@ -10,6 +10,7 @@
             <div class="card">
                 <div class="card-header"><?php echo e(__('outlet.delete')); ?></div>
                 <div class="card-body">
+                    <label class="control-label text-primary"><?php echo e(__('outlet.gambar')); ?></label>
                     <label class="control-label text-primary"><?php echo e(__('outlet.name')); ?></label>
                     <p><?php echo e($outlet->name); ?></p>
                     <label class="control-label text-primary"><?php echo e(__('outlet.address')); ?></label>

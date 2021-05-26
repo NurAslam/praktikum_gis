@@ -14,6 +14,10 @@ class OutletMapController extends Controller
      */
     public function index(Request $request)
     {
+        return view('dashboard');
+    }
+    public function map(Request $request)
+    {
         return view('outlets.map');
     }
 }
